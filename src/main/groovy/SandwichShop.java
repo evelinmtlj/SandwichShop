@@ -5,6 +5,9 @@ public class SandwichShop {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the size of your sandwich 1 or 2:"); // ask user sandwich size
         int size = scanner.nextInt();
+        System.out.println("Would you like your sandwich loaded yes or no? ");
+        String answer = scanner.nextLine().trim().toLowerCase();
+        boolean response = answer.equals("yes");
         double price1 = 5.45;
         double price2 = 8.95;
         double totalPrice = 0;
@@ -16,6 +19,8 @@ public class SandwichShop {
             System.out.println("Invalid sandwich size");
         }
 
+System.out.print("Would you like your sandwich loaded yes or no? ");
+        String answer = scanner.nextLine(); // true no yes false = no
 
         System.out.print("Enter your age:");
         int age = scanner.nextInt();
