@@ -15,12 +15,17 @@ public class SandwichShop {
         double LargeLoaded = 1.75;
         double totalPrice = 0;
         if (size == 1) {
-            totalPrice = price1 + regularLoaded;
-
+            totalPrice = price1;
+            if  (answer) {
+                totalPrice += regularLoaded;
+            }
         } else if (size == 2) {
-            totalPrice = price2 + LargeLoaded;
+            totalPrice = price2;
+            if (answer){
+                totalPrice += price2;
+            }
         } else {
-            System.out.println("Invalid sandwich size");
+         System.out.println("Error sandwich size not found");
         }
 
 
