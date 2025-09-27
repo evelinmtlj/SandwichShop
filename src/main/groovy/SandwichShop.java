@@ -5,7 +5,7 @@ public class SandwichShop {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the size of your sandwich 1 or 2:"); // ask user sandwich size
         int size = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // use this so the user can type their answer for the next question
         System.out.println("Would you like your sandwich loaded yes or no? ");
         String response = scanner.nextLine().trim().toLowerCase();
         boolean answer = response.equals("yes");
@@ -13,21 +13,20 @@ public class SandwichShop {
         double price2 = 8.95;
         double regularLoaded = 1.0;
         double LargeLoaded = 1.75;
-        double totalPrice = 0;
+        double totalPrice = 0; // this will change depending on the answer
         if (size == 1) {
-            totalPrice = price1;
+            totalPrice = price1; // Nesting was necessary just in case not loaded
             if  (answer) {
                 totalPrice += regularLoaded;
             }
         } else if (size == 2) {
             totalPrice = price2;
             if (answer){
-                totalPrice += price2;
+                totalPrice += LargeLoaded;
             }
         } else {
          System.out.println("Error sandwich size not found");
         }
-
 
 
         System.out.print("Enter your age:");
