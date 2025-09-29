@@ -46,7 +46,7 @@ public class SandwichShop {
             }
 
 
-            System.out.printf("The cost of your sandwich is $%.2f%n", totalPrice);
+            System.out.printf("The cost of your sandwich is $%.2f%n", totalPrice);//
         }
 
     }
