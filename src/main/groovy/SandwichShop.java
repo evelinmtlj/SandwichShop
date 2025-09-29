@@ -43,7 +43,7 @@ public class SandwichShop {
         if (age <= 17) {
             totalPrice = totalPrice - (totalPrice * .10); // discount
         } else if (age >= 65) {
-            totalPrice = totalPrice - (totalPrice * .20);
+            totalPrice = totalPrice - (totalPrice * .20); //discount
         }
 
 
