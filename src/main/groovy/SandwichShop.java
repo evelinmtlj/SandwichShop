@@ -5,7 +5,7 @@ public class SandwichShop {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the size of your sandwich 1 or 2:"); // ask user sandwich size
         int size = scanner.nextInt();
-        if (size != 1 && size !=2){ // this check if size isn't equal to 1 or 2 it will output invalid size
+        if (size != 1 && size != 2) { // this check if size isn't equal to 1 or 2 it will output invalid size
             System.out.println("INVALID SANDWICH SIZE");
             return; /*this stops if the user enters
             other answer that isn't 1 or 2
@@ -23,32 +23,31 @@ public class SandwichShop {
 
         if (size == 1) {
             totalPrice = price1; // Nesting was necessary just in case not loaded
-            if  (answer) {
+            if (answer) {
                 totalPrice += regularLoaded; // same thing as adding total price and regularloaded
             }
         } else if (size == 2) {
             totalPrice = price2;
-            if (answer)  {
-                totalPrice +=largeLoaded;
+            if (answer) {
+                totalPrice += largeLoaded;
 
             }
         }
 
-        }
-
 
         System.out.print("Enter your age:");
-        int age = scanner.nextInt();{
+        int age = scanner.nextInt();
+        {
 
-        if (age <= 17) {
-            totalPrice = totalPrice - (totalPrice * .10); // discount
-        } else if (age >= 65) {
-            totalPrice = totalPrice - (totalPrice * .20); //discount
+            if (age <= 17) {
+                totalPrice = totalPrice - (totalPrice * .10); // discount
+            } else if (age >= 65) {
+                totalPrice = totalPrice - (totalPrice * .20); //discount
+            }
+
+
+            System.out.printf("The cost of your sandwich is $%.2f%n", totalPrice);
         }
 
-
-        System.out.printf("The cost of your sandwich is $%.2f%n", totalPrice);
     }
-
-
-}
+    }
